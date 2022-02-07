@@ -1,11 +1,11 @@
-const ItemListContainer = () =>{
+const ItemListContainer = (props) =>{
     return (
         <>
             <div className="ItemListContainer">
-                <p>Este es el ItemListContainer y luego iria el catalogo</p>
+                <p>{props.saludo}</p>
             </div>
         </>
     );
 }
 
-export default ItemListContainer
+export default ItemListContainer;
