@@ -22,3 +22,8 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+.ItemCount{
+  display: flex;
+  flex-direction: row;
+}
