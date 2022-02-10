@@ -9,7 +9,7 @@ function App() {
     <>
     <NavBar />
     <ItemListContainer saludo="Hola aca va a ir la lista de los productos" />
-    <ItemCount/>
+    <ItemCount stock={5} initial={1} addon={0}/>
     </>
   );
 }
