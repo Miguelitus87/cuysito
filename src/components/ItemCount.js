@@ -1,29 +1,44 @@
 import { useState} from 'react';
 
-const ItemCount = () =>{
+const ItemCount = (parametros) =>{
 
     //let cantidad = 0;
-    const [cantidad, setCantidad] = useState(1);
+    const [cantidad, setCantidad] = useState(parametros.initial);
 
     const increment = () => {        
-        if (cantidad < 5){
+        if (cantidad < parametros.stock){
+
             setCantidad(cantidad+1) ;  
+            
         }    
     }
     
-
     const decrease = () => {
-        if (cantidad > 1){
+        if (cantidad > parametros.initial){
             setCantidad(cantidad-1) ;
         }
     }
 
+    const addItem = () => {
+        alert(`agregaste la cantidad de: ${cantidad}`);
+
+        
+    }
+
     return (
         <>
-            <div className="ItemCount">                
-                <button className="btn btn-warning" onClick={decrease}>-</button>
-                <p>{cantidad} items</p>
-                <button className="btn btn-warning" onClick={increment}>+</button>
+            <div className="ItemCount"> 
+                <div className="ItemCountB">  
+                    <p>Producto</p>
+                </div>
+                <div className="ItemCountB">                
+                    <button className="btn btn-warning" onClick={decrease}>-</button>
+                    <p>Cantidad: {cantidad}</p>
+                    <button className="btn btn-warning" onClick={increment}>+</button>
+                </div>
+                <div className="ItemCountB">
+                    <button className="btn btn-warning" onClick={addItem}>Añadir al carrito</button>
+                </div>
             </div>
         </>
     );
