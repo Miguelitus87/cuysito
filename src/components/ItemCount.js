@@ -1,47 +1,45 @@
 import { useState} from 'react';
 
-const ItemCount = (parametros) =>{
+const ItemCount = (parametro, addItem) =>{
 
-    //let cantidad = 0;
-    const [cantidad, setCantidad] = useState(parametros.initial);
+    const [cantidad, setCantidad] = useState(parametro.initial);
 
     const increment = () => {        
-        if (cantidad < parametros.stock){
-
-            setCantidad(cantidad+1) ;  
-            
+        if (cantidad < parametro.stock){
+            setCantidad(cantidad+1) ;              
         }    
     }
     
     const decrease = () => {
-        if (cantidad > parametros.initial){
+        if (cantidad > parametro.initial){
             setCantidad(cantidad-1) ;
         }
     }
 
-    const addItem = () => {
-        alert(`agregaste la cantidad de: ${cantidad}`);
+    addItem = (e) => {
+        e = cantidad;
+        alert(`llamada a funcion addItem `+e)
+        return
+    } 
 
-        
-    }
 
-    return (
-        <>
-            <div className="ItemCount"> 
-                <div className="ItemCountB">  
-                    <p>Producto</p>
+        return (
+            <>
+                <div className="ItemCount"> 
+                    <div className="ItemCountB">  
+                    </div>
+                    <div className="ItemCountB">                
+                        <button className="btn btn-warning" onClick={decrease}>-</button>
+                        <p>Cantidad: {cantidad}</p>
+                        <button className="btn btn-warning" onClick={increment}>+</button>
+                    </div>
+                    <div className="ItemCountB">
+                        <button className="btn btn-warning" onClick={addItem}>Añadir al carrito</button>
+                    </div>
                 </div>
-                <div className="ItemCountB">                
-                    <button className="btn btn-warning" onClick={decrease}>-</button>
-                    <p>Cantidad: {cantidad}</p>
-                    <button className="btn btn-warning" onClick={increment}>+</button>
-                </div>
-                <div className="ItemCountB">
-                    <button className="btn btn-warning" onClick={addItem}>Añadir al carrito</button>
-                </div>
-            </div>
-        </>
-    );
+            </>
+        );
+    
 }
 
 export default ItemCount;
