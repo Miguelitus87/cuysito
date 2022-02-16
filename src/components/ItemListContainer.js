@@ -58,6 +58,7 @@ export const ItemListContainer = () =>{
                     DbItems.map((item, i) => (
                         <ItemList 
                             key={i} 
+                            id={item.id}
                             title={item.title} 
                             description={item.description} 
                             price={item.price} 
