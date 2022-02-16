@@ -13,10 +13,10 @@ export const NavBar = () =>{
                 <br/>
                 <div className="Buttons">
                     <div>
-                        <Link to="/Remeras"><button type="button" className="btn btn-warning">Remeras</button></Link>
-                        <Link to="/Musculosas"><button type="button" className="btn btn-warning">Musculosas</button></Link>
-                        <Link to="/Pantalones"><button type="button" className="btn btn-warning">Pantalones</button></Link>
-                        <Link to="/Zapatillas"><button type="button" className="btn btn-warning">Zapatillas</button></Link>
+                        <Link to="/categoria/remeras"><button type="button" className="btn btn-warning">Remeras</button></Link>
+                        <Link to="/categoria/camisas"><button type="button" className="btn btn-warning">Camisas</button></Link>
+                        <Link to="/categoria/musculosas"><button type="button" className="btn btn-warning">Musculosas</button></Link>
+                        <Link to="/categoria/pantalones"><button type="button" className="btn btn-warning">Pantalones</button></Link>
                         
                     </div>
                     <div>

@@ -1,17 +1,12 @@
+import { Item } from "./Item";
 import React from "react";
 import { useState } from "react";
-import { Item } from "./Item";
-import { ItemCount } from "./ItemCount";
+import { Link } from "react-router-dom";
+
+
 
 export const ItemList = (item) =>{
 
-    const [cantidad, setCantidad] = useState(0);
-    
-    const onAdd = (data)=> {
-        setCantidad(data);
-        alert(`se agreago al carrito `+data)
-        
-    }
 
         return (
                 <>
@@ -21,11 +16,9 @@ export const ItemList = (item) =>{
                         <h3>{item.title}</h3>
                         <img src={item.pictureURL} alt={item.title} />                        
                         <p>Descripcion: {item.description}</p>
-                        <button className="btn btn-warning" >Ver Detalle</button>               
+                        <Link to="/item"><button className="btn btn-warning" >Ver Detalle</button></Link>               
                         <p>Precio: ${item.price}</p>    
 
-                        <ItemCount stock={5} initial={1} addItem={onAdd}/>    
-                        
                     </div>                    
                 </div>
                 </>

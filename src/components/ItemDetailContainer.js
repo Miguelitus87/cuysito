@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { productos, getList } from "../database";
+import { database, getList } from "../database";
 import { ItemDetail } from "./ItemDetail";
 
 export const ItemDetailContainer = () =>{
@@ -8,7 +8,7 @@ export const ItemDetailContainer = () =>{
 
     useEffect( async() => {
         try{
-            const data = await getList(productos, 2000);
+            const data = await getList(database, 2000);
             setItems(data)
         
         } catch(e) {
@@ -20,7 +20,7 @@ export const ItemDetailContainer = () =>{
     return (
         <>            
             <div className="ItemDetailContainer">
-                <ItemDetail />
+                <ItemDetail key={1}/>
 
             </div>
         </>

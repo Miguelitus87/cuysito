@@ -1,6 +1,6 @@
 import { useState} from 'react';
 
-export const ItemCount = (parametro, addItem) =>{
+export const ItemCount = (parametro, onAdd) =>{
 
     const [cantidad, setCantidad] = useState(parametro.initial);
 
@@ -16,7 +16,7 @@ export const ItemCount = (parametro, addItem) =>{
         }
     }
 
-    addItem = (e) => {
+    onAdd = (e) => {
         e = cantidad;
         alert(`llamada a funcion addItem `+e)       
     } 
@@ -33,7 +33,7 @@ export const ItemCount = (parametro, addItem) =>{
                         <button className="btn btn-warning" onClick={increment}>+</button>
                     </div>
                     <div className="ItemCountB">
-                        <button className="btn btn-warning" onClick={addItem}>Añadir al carrito</button>
+                        <button className="btn btn-warning" onClick={onAdd}>Añadir al carrito</button>
                     </div>
                 </div>
             </>
