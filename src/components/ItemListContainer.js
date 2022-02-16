@@ -1,8 +1,8 @@
-import ItemList from "./ItemList";
+import { ItemList } from "./ItemList";
 import { productos, getList } from "../database";
 import { useEffect, useState } from "react";
 
-const ItemListContainer = () =>{
+export const ItemListContainer = () =>{
 
     const[items,setItems]= useState([]);
 
@@ -27,6 +27,7 @@ const ItemListContainer = () =>{
     return (
         <>            
             <div className="ItemListContainer">
+                
                 {                    
                     items.map((item, i) => (
                         <ItemList 
@@ -45,4 +46,3 @@ const ItemListContainer = () =>{
     );
 }
 
-export default ItemListContainer;

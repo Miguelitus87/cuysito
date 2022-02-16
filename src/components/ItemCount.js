@@ -1,6 +1,6 @@
 import { useState} from 'react';
 
-const ItemCount = (parametro, addItem) =>{
+export const ItemCount = (parametro, addItem) =>{
 
     const [cantidad, setCantidad] = useState(parametro.initial);
 
@@ -18,8 +18,7 @@ const ItemCount = (parametro, addItem) =>{
 
     addItem = (e) => {
         e = cantidad;
-        alert(`llamada a funcion addItem `+e)
-        return
+        alert(`llamada a funcion addItem `+e)       
     } 
 
 
@@ -42,4 +41,3 @@ const ItemCount = (parametro, addItem) =>{
     
 }
 
-export default ItemCount;

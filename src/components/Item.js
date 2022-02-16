@@ -1,5 +1,4 @@
-
-const Item = (product,pic,details) =>{
+export const Item = (product,pic,details) =>{
     return (
         <>
             <div className="Item">
@@ -11,4 +10,3 @@ const Item = (product,pic,details) =>{
     );
 }
 
-export default Item
