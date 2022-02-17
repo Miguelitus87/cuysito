@@ -25,16 +25,11 @@ export const ItemCount = (parametro, onAdd) =>{
         return (
             <>
                 <div className="ItemCount"> 
-                    <div className="ItemCountB">  
-                    </div>
                     <div className="ItemCountB">                
-                        <button className="btn btn-warning" onClick={decrease}>-</button>
-                        <p>Cantidad: {cantidad}</p>
-                        <button className="btn btn-warning" onClick={increment}>+</button>
-                    </div>
-                    <div className="ItemCountB">
-                        <button className="btn btn-warning" onClick={onAdd}>Añadir al carrito</button>
-                    </div>
+                        <button className="btn btn-warning btn-lg" onClick={decrease}>-</button>
+                        <button className="btn btn-warning btn-lg" onClick={onAdd}>Añadir al carrito {cantidad} unidades</button>
+                        <button className="btn btn-warning btn-lg" onClick={increment}>+</button>
+                    </div>                
                 </div>
             </>
         );
