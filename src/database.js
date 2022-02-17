@@ -5,7 +5,7 @@ export const database = [
         description: "Algodon",
         price: 10,
         idCategoria: 'remeras',
-        pictureURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsvnsviYgmB0i0y3dhVS5QbyzKuUWBJ9xKoQ&usqp=CAU",
+        pictureURL: "https://i.postimg.cc/RF6ZXtff/remera1.jpg",
     },
     {
         id: 1,
@@ -13,7 +13,7 @@ export const database = [
         description: "Modal",            
         price: 10,
         idCategoria: 'remeras',
-        pictureURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsvnsviYgmB0i0y3dhVS5QbyzKuUWBJ9xKoQ&usqp=CAU",
+        pictureURL: "https://i.postimg.cc/R0b07d34/remera2.jpg",
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ export const database = [
         description: "algodon",            
         price: 10,
         idCategoria: 'camisas',
-        pictureURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsvnsviYgmB0i0y3dhVS5QbyzKuUWBJ9xKoQ&usqp=CAU",
+        pictureURL: "https://i.postimg.cc/7PJ5NFMc/camisa1.jpg",
     },
     {
         id: 3,
@@ -29,23 +29,23 @@ export const database = [
         description: "algodon",            
         price: 10,
         idCategoria: 'camisas',
-        pictureURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsvnsviYgmB0i0y3dhVS5QbyzKuUWBJ9xKoQ&usqp=CAU",
+        pictureURL: "https://i.postimg.cc/5Nc6Ksst/camisa2.jpg",
     },
     {
         id: 4,
-        title: "Musculosa A",
+        title: "Chomba A",
         description: "algodon",            
         price: 10,
-        idCategoria: 'musculosas',
-        pictureURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsvnsviYgmB0i0y3dhVS5QbyzKuUWBJ9xKoQ&usqp=CAU",
+        idCategoria: 'chombas',
+        pictureURL: "https://i.postimg.cc/cLhCH00K/chomba1.jpg",
     },
     {
         id: 5,
-        title: "Musculosa B",
+        title: "Chomba B",
         description: "modal",            
         price: 10,
-        idCategoria: 'musculosas',
-        pictureURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsvnsviYgmB0i0y3dhVS5QbyzKuUWBJ9xKoQ&usqp=CAU",
+        idCategoria: 'chombas',
+        pictureURL: "https://i.postimg.cc/8CC5f9zZ/chomba2.jpg",
     },
     {
         id: 6,
@@ -53,7 +53,7 @@ export const database = [
         description: "de ripstop",            
         price: 10,
         idCategoria: 'pantalones',
-        pictureURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsvnsviYgmB0i0y3dhVS5QbyzKuUWBJ9xKoQ&usqp=CAU",
+        pictureURL: "https://i.postimg.cc/g2mrmnFF/pantalon1.jpg",
     },
     {
         id: 7,
@@ -61,7 +61,7 @@ export const database = [
         description: "de ripstop",            
         price: 10,
         idCategoria: 'pantalones',
-        pictureURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsvnsviYgmB0i0y3dhVS5QbyzKuUWBJ9xKoQ&usqp=CAU",
+        pictureURL: "https://i.postimg.cc/vHWDJ5Kt/pantalon2.jpg",
     },
 
 ];
