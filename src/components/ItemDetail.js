@@ -1,17 +1,23 @@
-import { ItemCount } from "./ItemCount";
-
+import { ItemCount} from "./ItemCount";
 import { Link } from "react-router-dom";
+import { useState} from 'react';
+import { useParams } from "react-router-dom";
 
 
 export const ItemDetail = (item) =>{
 
-    {/*const [cantidad, setCantidad] = useState(0);*/}
     
-    const onAdd = (data)=> {
-        {/*setCantidad(data);*/}
-        alert(`se agrego al carrito esta cantidad de items `+data)
+    const {id} = useParams();
+    
+    const [itemID, setItemID] = useState(id);
+
+    const onAdd = (canti)=> {        
+        alert(`se agrego `+canti+` unidades al carrito del producto con ID N°`+itemID);        
+        setItemID(id);
         
     }
+
+    
 
     return (
         <>            
@@ -27,6 +33,8 @@ export const ItemDetail = (item) =>{
                         <p>Precio: ${item.price} pesos</p>    
                         <ItemCount stock={5} initial={1} addItem={onAdd}/>    
                         <Link to={'/'}><button className="btn btn-warning btn-lg" >Volver al Inicio</button></Link>   
+                        <hr/>
+                        <Link to={'/cart'}><button className="btn btn-warning btn-lg" >Terminar mi compra</button></Link>   
                 </div>
             </div>
         </>
