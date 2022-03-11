@@ -1,6 +1,8 @@
-
+import { CartContext } from "../context/CartContext";
+import { useContext } from "react";
 
 export const ItemCarrito = (ItemCarrito) =>{
+    const cartList = useContext(CartContext);
     return (
         <>
             <div className="ItemCarrito">
@@ -8,7 +10,7 @@ export const ItemCarrito = (ItemCarrito) =>{
                 <h3>{ItemCarrito.title}</h3>                
                 <p>Descripcion: {ItemCarrito.description}</p>                
                 <p>Precio: ${ItemCarrito.price}</p>  
-                <button >Remover</button>
+                <button className="btn btn-warning btn-lg" onClick={()=>cartList.removeItem()}>Remover</button>
             </div>
             <hr></hr>                                         
         </>

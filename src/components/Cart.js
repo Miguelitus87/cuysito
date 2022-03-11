@@ -6,17 +6,18 @@ import { CartContext } from "../context/CartContext";
 
 export const Cart = () =>{
 
-const  ccontext = useContext(CartContext);
+const cartList = useContext(CartContext);
 
     return (
         <>            
             <div className="Cart">
                 <h1>CARRITO DE COMPRAS</h1>
+                
                 <div>
                 {/* se va a mapear CartList y no database */}
                 {                    
                     
-                    database.map((item) => (
+                    cartList.cartList.map((item) => (
                         <ItemCarrito 
                             key={item.id}                             
                             title={item.title} 
@@ -31,7 +32,11 @@ const  ccontext = useContext(CartContext);
                 </div>    
                 <button 
                     className="btn btn-warning btn-lg" 
-                    onClick={()=>ccontext.prueba()} >checkout
+                    onClick={()=>cartList.checkout()} >checkout
+                </button>
+                <button 
+                    className="btn btn-warning btn-lg" 
+                    onClick={()=>console.log(cartList.cartList)} >TEST
                 </button>
                 <Link to={'/'}><button className="btn btn-warning btn-lg" >Volver al Inicio</button></Link> 
             </div>

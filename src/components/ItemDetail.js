@@ -6,12 +6,14 @@ import { CartContext } from "../context/CartContext";
 
 export const ItemDetail = (item) =>{
 
+    
     const [stock, setStock] = useState(1);
     const cartList = useContext(CartContext);
-
-    const onAdd = (quantity) => {
-        alert(`${quantity} units were added to your cart!`);
+    
+    const onAdd = (item, quantity) => {      
+        
         setStock(quantity);
+        
         cartList.addItem(item, quantity);
 
     }
