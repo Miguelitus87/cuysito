@@ -6,6 +6,7 @@ export const database = [
         price: 10,
         idCategoria: 'remeras',
         pictureURL: "https://i.postimg.cc/RF6ZXtff/remera1.jpg",
+        stock: 5,
     },
     {
         id: 1,
@@ -14,6 +15,7 @@ export const database = [
         price: 10,
         idCategoria: 'remeras',
         pictureURL: "https://i.postimg.cc/R0b07d34/remera2.jpg",
+        stock: 5,
     },
     {
         id: 2,
@@ -22,6 +24,7 @@ export const database = [
         price: 10,
         idCategoria: 'camisas',
         pictureURL: "https://i.postimg.cc/7PJ5NFMc/camisa1.jpg",
+        stock: 5,
     },
     {
         id: 3,
@@ -30,6 +33,8 @@ export const database = [
         price: 10,
         idCategoria: 'camisas',
         pictureURL: "https://i.postimg.cc/5Nc6Ksst/camisa2.jpg",
+        stock: 5,
+
     },
     {
         id: 4,
@@ -38,6 +43,8 @@ export const database = [
         price: 10,
         idCategoria: 'chombas',
         pictureURL: "https://i.postimg.cc/cLhCH00K/chomba1.jpg",
+        stock: 5,
+
     },
     {
         id: 5,
@@ -46,6 +53,8 @@ export const database = [
         price: 10,
         idCategoria: 'chombas',
         pictureURL: "https://i.postimg.cc/8CC5f9zZ/chomba2.jpg",
+        stock: 5,
+
     },
     {
         id: 6,
@@ -54,6 +63,8 @@ export const database = [
         price: 10,
         idCategoria: 'pantalones',
         pictureURL: "https://i.postimg.cc/g2mrmnFF/pantalon1.jpg",
+        stock: 5,
+
     },
     {
         id: 7,
@@ -62,6 +73,8 @@ export const database = [
         price: 10,
         idCategoria: 'pantalones',
         pictureURL: "https://i.postimg.cc/vHWDJ5Kt/pantalon2.jpg",
+        stock: 5,
+
     },
 
 ];

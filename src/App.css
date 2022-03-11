@@ -96,3 +96,11 @@
 .ItemDetail{
   display: flex;
 }
+
+
+.ItemCarrito{
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  text-align: left;
+}
