@@ -1,20 +1,19 @@
 import { ItemCount} from "./ItemCount";
 import { Link } from "react-router-dom";
-import { useState} from 'react';
-import { useParams } from "react-router-dom";
+import { useContext, useState} from 'react';
+import { CartContext } from "../context/CartContext";
 
 
 export const ItemDetail = (item) =>{
 
-    
-    const {id} = useParams();
-    
-    const [itemID, setItemID] = useState(id);
+    const [stock, setStock] = useState(1);
+    const cartList = useContext(CartContext);
 
-    const onAdd = (canti)=> {        
-        alert(`se agrego `+canti+` unidades al carrito del producto con ID N°`+itemID);        
-        setItemID(id);
-        
+    const onAdd = (quantity) => {
+        alert(`${quantity} units were added to your cart!`);
+        setStock(quantity);
+        cartList.addItem(item, quantity);
+
     }
 
     
@@ -31,10 +30,13 @@ export const ItemDetail = (item) =>{
                         
                         <p>{item.description}</p>                        
                         <p>Precio: ${item.price} pesos</p>    
-                        <ItemCount stock={5} initial={1} addItem={onAdd}/>    
-                        <Link to={'/'}><button className="btn btn-warning btn-lg" >Volver al Inicio</button></Link>   
+
+                        <ItemCount stock={item.stock} initial={stock} onAdd={onAdd}/>    
+                        
+
+                        <Link to={'/cart'}><button className="btn btn-warning btn-lg" >Terminar compra / Ir al Carrito</button></Link>
                         <hr/>
-                        <Link to={'/cart'}><button className="btn btn-warning btn-lg" >Terminar mi compra</button></Link>   
+                        <Link to={'/'}><button className="btn btn-warning btn-lg" >Volver al Inicio</button></Link>   
                 </div>
             </div>
         </>
