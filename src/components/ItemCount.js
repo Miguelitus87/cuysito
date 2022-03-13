@@ -22,7 +22,8 @@ export const ItemCount = (parametro) =>{
     return (
         <>
             <div className="ItemCount"> 
-                <div className="ItemCountB">                
+                <div className="ItemCountB">    
+                            
                     <button className="btn btn-warning btn-lg" 
                         onClick={decrease}>-</button>
                     <button className="btn btn-warning btn-lg" 

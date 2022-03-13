@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ItemDetail } from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { database, getList } from "../database";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDoc, getDocs, query, where, doc, docSnap } from "firebase/firestore";
 import  db  from "../utils/firebase";
 
 
@@ -10,16 +10,17 @@ export const ItemDetailContainer = () =>{
 
     const {id} = useParams(); 
     
-    const[DbItems,setDbItems]= useState([]); 
+    const[item,setItem]= useState([]); 
 
     useEffect( async() => {
         try{
             const data = await getList(database.filter(item => item.id === parseInt(id)), 100);
-            setDbItems(data)
+            setItem(data)
         
         } catch(error) {
             console.log(error)
         }
+        console.log(item);
     },[id]);
 
     return (
@@ -27,7 +28,7 @@ export const ItemDetailContainer = () =>{
             <div className="ItemDetailContainer">                
                 
                 {                    
-                    DbItems.map((item) => (                        
+                    item.map((item) => (                        
                         <ItemDetail 
                             key={item.id} 
                             title={item.title} 
@@ -47,17 +48,16 @@ export const ItemDetailContainer = () =>{
 
 
 
+
 {/*
 useEffect( async() => {
-    const firestoreFetch = async () => {
-        const querySnapshot = await getDocs(collection(db, "products"));
-        
-        const dataFromFirestore = querySnapshot.docs.map(item => ( {id: item.id, ...item.data()} ) ) 
-        
-        return dataFromFirestore;
+    try{
+        const data = await getList(database.filter(item => item.id === parseInt(id)), 1);
+        setDbItems(data)
+    
+    } catch(error) {
+        console.log(error)
     }
-    firestoreFetch()
-        .then(result => setDbItems(result))
-        .catch(error => console.log(error));
-},[DbItems]);
+},[id]);
+
 */}
