@@ -1,5 +1,4 @@
 import {useState, createContext} from "react";
-import  db  from "../utils/firebase";
 
 export const CartContext = createContext();
 
@@ -14,24 +13,26 @@ const CartContextProvider = ({children})=>{
     }
 
     const addItem = (item, quantity) => {
-
-        console.log('Se ejecuta AddItem en cartContext');
         
+
+        
+        console.log('Se ejecuta AddItem en cartContext');       
         console.log(item);
         console.log(quantity);
+        
 
-        if (isInCart(item)) {
+        if (isInCart(item.id)) {
             console.log('Condicion If');
             for (const products of cartList) {
-                if (products.id === item) {
+                if (products.id === item.id) {
                         products.stock += quantity;
                 }
             }
             setCartList([...cartList]);
         } else {
-            console.log('Condicion else');
+    
             setCartList([
-                ...cartList,   //spread: agrega al contenido existente
+                ...cartList,   
                 {
                     id: item.id,
                     title: item.title,
@@ -40,6 +41,7 @@ const CartContextProvider = ({children})=>{
                     pictureURL: item.pictureURL 
                 }
             ]);        
+        
         }        
     };
 
