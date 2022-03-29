@@ -8,12 +8,12 @@ export const ItemDetail = (item) =>{
     const [stock, setStock] = useState(1);
     const cartList = useContext(CartContext);
     
-    const onAdd = (itemid, quantity) => {              
+
+    const onAdd = (id, quantity) => {              
         setStock(quantity);       
-        cartList.addItem(itemid, quantity);
+        cartList.addItem(id, quantity);
 
     }
-    
     
     
     return (
@@ -30,8 +30,6 @@ export const ItemDetail = (item) =>{
                         <p>Precio: ${item.price} pesos</p>    
 
                         <ItemCount stock={item.stock} initial={stock} onAdd={onAdd}/>    
-
-   
 
                         <Link to={'/cart'}><button className="btn btn-warning btn-lg" >Terminar compra / Ir al Carrito</button></Link>
                         <hr/>

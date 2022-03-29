@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 export const ItemCount = (parametro) =>{
 
-       
+
     const {id} = useParams(); 
     const [cantidad, setCantidad] = useState(parametro.initial);
         
@@ -27,7 +27,7 @@ export const ItemCount = (parametro) =>{
                     <button className="btn btn-warning btn-lg" 
                         onClick={decrease}>-</button>
                     <button className="btn btn-warning btn-lg" 
-                        onClick={ ()=>{ setCantidad(1); parametro.onAdd(id ,cantidad); }}>Añadir al carrito {cantidad} unidades</button>
+                        onClick={ ()=>{ setCantidad(1); parametro.onAdd(id, cantidad); }}>Añadir al carrito {cantidad} unidades</button>
                     <button className="btn btn-warning btn-lg" 
                         onClick={increment}>+</button>
                 </div>                
